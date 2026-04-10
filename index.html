@@ -932,4 +932,12 @@ function saveTextDoc() {
   addFileRow(title + '.txt', 'テキスト', Math.ceil(new Blob([text]).size / 1024) + ' KB');
   document.getElementById('text-title-input').value = '';
   document.getElementById('text-import-input').value = '';
-  alert(`「${title}」を登録しました。次の質問から�
+  alert(`「${title}」を登録しました。次の質問から   alert(`「${title}」を登録しました。次の質問から参照されます。`);
+}
+
+function escHtml(str) {
+  return (str||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;').replace(/\n/g,'<br>');
+}
+</script>
+</body>
+</html>
